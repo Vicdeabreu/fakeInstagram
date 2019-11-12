@@ -12,7 +12,6 @@ class PostController{
         $this->viewFormularioPost();
       break;
       case "cadastrar-post":
-        
         $this->cadastroPost();
         break;  
     }
@@ -27,14 +26,13 @@ class PostController{
   }
 
   private function listarPosts(){
-    $post = new Post();
+    $post = new Post(); /* Solo tiene una clase Post, pero es necesario crear el objeto */
     $listarPosts = $post->listarPosts();
     $_REQUEST['posts'] = $listarPosts;
     $this->viewPost();
   }
 
   private function cadastroPost(){
-    
     $descricao = $_POST['descricao'];
     $nomeArquivo = $_FILES['img']['name'];
     $linkTemp = $_FILES['img']['tmp_name'];
