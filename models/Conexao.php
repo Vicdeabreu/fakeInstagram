@@ -7,6 +7,7 @@
     private $pass = '';
 
     protected function criarConexao(){
+      // Retorna a conexao para quem quiser usar //
       return new PDO($this->host,$this->user,$this->pass);
     }
 

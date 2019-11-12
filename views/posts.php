@@ -1,6 +1,6 @@
 <?php 
 
-    $posts = $_REQUEST['posts'];
+    $posts = $_REQUEST['posts']; // Agarra las informaciones que están siendo colocadas en el Request del controller
 
 ?>
 
